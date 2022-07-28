@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="logo py-1">
+    <img src="../../assets/images/zincat.png" alt="Company Logo"/>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-2">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+    </form>
+    <!-- <form [formGroup]="contactForm" novalidate>
+      <select class="form-location" formControlName="location">
+        <option [ngValue]="null" disabled>Select Location</option>
+        <option *ngFor="let location of locations" [ngValue]="location.id">
+          {{ location.name }}
+        </option>
+      </select>
+    </form> -->
+
+    <form class="form-inline my-2 my-lg-2">
+      <select
+        id="inputState"
+        class="form-control sub mr-sm-2"
+
+      >
+        <option>Location</option>
+        <option>...</option>
+      </select>
+    </form>
+    <!-- <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+        </a>
+      </li>
+    </ul> -->
+  </div>
+  <!-- <div class="profile-logo">
+    <img src="../../assets/images/zincat.png" alt="profile Picture" />
+  </div>
+  <div class="profile-details">
+    <h2>Nawod</h2>
+    <p>admin</p>
+  </div> -->
+  <!-- <div class="notify"><mat-icon>message</mat-icon></div> -->
+
+  <div class="row profile-logo mr-2 ml-auto">
+    <ul class="row m-0 align-items-center">
+      <li>
+        <button
+          mat-button
+          [matMenuTriggerFor]="menu"
+          class="user mt-2 d-flex align-items-center"
+        >
+          <img
+            src="../../assets/images/profile.png"
+            alt=""
+            class="user-image m-2 p-1"
+          />
+
+          User Name
+          <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+          </button>
+        </mat-menu>
+      </li>
+    </ul>
+  </div>
+</nav>

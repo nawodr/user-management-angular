@@ -1,0 +1,81 @@
+.logo {
+  text-align: left;
+  padding: 2.6rem 1rem;
+
+  img {
+    margin-left: 40px;
+    width: 60px;
+  }
+}
+
+.form-control {
+  margin-left: 250px;
+  width: 450px;
+  padding: auto;
+}
+
+.form-location {
+  margin-left: 25px;
+  width: 45px;
+  height: 35px;
+  padding: auto;
+}
+
+.sub {
+  margin-left: 15px;
+  width: 200px;
+  padding: auto;
+}
+
+.profile-logo {
+  margin-left: 150px;
+
+  img {
+    width: 60px;
+  }
+}
+
+.profile-details {
+  margin-left: 15px;
+}
+
+.notify {
+  margin-left: 15px;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+.user {
+  font-size: 14px;
+}
+
+mat-toolbar {
+  background: #f7f7f7;
+}
+
+.user-image {
+  // border-radius: 50%;
+  width: 50px;
+  height: 60px;
+
+  &-icon {
+    height: 18px;
+    font-size: 16px;
+  }
+}
+
+::ng-deep {
+  .mat-menu-content {
+    width: 160px;
+  }
+}

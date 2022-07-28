@@ -1,0 +1,42 @@
+
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+
+  &__box {
+    min-height: 12px;
+    background: #3b5082;
+    margin: 0 -1rem;
+    font-size: 36px;
+  }
+
+  &__search {
+    height: 60px;
+  }
+
+  // &__content {
+  //   min-height: calc(100vh - 178px);
+  //   border-radius: 10px;
+  //   margin-top: -2rem;
+  //   background: white;
+  //   color: black;
+  //   font-size: 2rem;
+  //   &-data {
+  //     width: 1000px;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //   }
+
+  // }
+}
+
+.icon {
+  margin-left: 750px;
+}
+
+.mat-icon {
+  padding-left: 40px;
+  color: black;
+}

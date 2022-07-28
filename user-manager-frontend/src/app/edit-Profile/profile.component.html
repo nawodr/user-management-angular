@@ -1,0 +1,173 @@
+<!-- <div class="modal-header">
+  <h1 class="modal-title">Update User</h1>
+</div>
+<div class="modal-body">
+  <form class="p-1">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">Role:</label>
+        <select
+          id="inputState"
+          aria-placeholder="Role"
+          class="form-control"
+          [formControl]="role"
+          required=""
+        >
+          <option>{{ user.role }}</option>
+          <option *ngFor="let data of Data" [ngValue]="data.role">
+            {{ data.role }}
+          </option>
+        </select>
+      </div>
+
+      <div class="row mt-4">
+        <div class="form-group col-md-4">
+          <label for="inputState">Locations:</label>
+          <select
+            id="inputState"
+            aria-placeholder="Location"
+            class="form-control"
+            [formControl]="location"
+            required=""
+          >
+            <option>{{ user.location }}</option>
+            <option *ngFor="let data of Data" [ngValue]="data.location">
+              {{ data.location }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Select Company:</label>
+          <select
+            id="inputState"
+            aria-placeholder="Company"
+            class="form-control"
+            [formControl]="company"
+            required=""
+          >
+            <option>{{ user.company }}</option>
+            <option *ngFor="let data of Data" [ngValue]="data.company">
+              {{ data.company }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputEmployee">Employee Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="employee"
+            [formControl]="employee"
+            placeholder="Employee"
+            
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="form-group col-md-4">
+        <label for="inputPassword4">User Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputPassword4"
+          [formControl]="userName"
+          placeholder="User Name"
+        />
+      </div>
+      
+    </div>
+    
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" (click)="closeModal()">
+    Close
+  </button>
+  <button type="submit" class="btn btn-primary" (click)="update()">
+    Update User
+  </button>
+</div> -->
+<form class="p-1" [formGroup]="formGroup" (validSubmit)="update()">
+  <div class="modal-header">
+    <h1 class="modal-title">Update User</h1>
+  </div>
+  <div class="modal-body">
+    <div class="form-row">
+       
+      <div class="form-group col-md-4">
+        <label for="inputState">Role:</label>
+        <select
+          aria-placeholder="Role"
+          class="form-control"
+          formControlName="role"
+        >
+          <option selected>{{ user.role }}</option>
+          <option *ngFor="let data of Data" [ngValue]="data.role">
+            {{ data.role }}
+          </option>
+        </select>
+      </div>
+
+      <div class="row mt-4">
+        <div class="form-group col-md-4">
+          <label for="inputState">Locations:</label>
+          <select
+            aria-placeholder="Location"
+            class="form-control"
+            formControlName="location"
+          >
+            <option>{{ user.location }}</option>
+            <option *ngFor="let data of Data" [ngValue]="data.location">
+              {{ data.location }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Select Company:</label>
+          <select
+            id="inputState"
+            aria-placeholder="Company"
+            class="form-control"
+            formControlName="company"
+          >
+            <option>{{ user.company }}</option>
+            <option *ngFor="let data of Data" [ngValue]="data.company">
+              {{ data.company }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputEmployee">Employee Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="employee"
+            placeholder="Employee Name"
+            formControlName="employee"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="form-group col-md-4">
+        <label for="inputPassword4">User Name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="User Name"
+          formControlName="userName"
+          [readonly]="true"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="closeModal()">
+      Close
+    </button>
+    <button type="submit" class="btn btn-primary" (click)="update()">
+      Update User
+    </button>
+  </div>
+</form>

@@ -1,0 +1,219 @@
+<!-- <form class="p-1">
+  <div class="modal-header">
+    <h1 class="modal-title">Add New User</h1>
+  </div>
+  <div class="modal-body">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">Role:</label>
+        <select
+          id="inputState"
+          aria-placeholder="Role"
+          class="form-control"
+          [formControl]="role"
+          required="Can Not Empty"
+        >
+          <option disabled>Role</option>
+          <option>Admin</option>
+          <option>HR</option>
+          <option>User</option>
+        </select>
+      </div>
+      <div class="row mt-4">
+        <div class="form-group col-md-4">
+          <label for="inputState">Locations:</label>
+          <select
+            id="inputState"
+            aria-placeholder="Locations"
+            class="form-control"
+            [formControl]="location"
+            required="Can Not Empty"
+          >
+            <option disabled>Locations</option>
+            <option>Colombo</option>
+            <option>Hanwella</option>
+            <option>Galle</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputState">Company:</label>
+          <select
+            id="inputState"
+            aria-placeholder="Company"
+            class="form-control"
+            [formControl]="company"
+            required="Can Not Empty"
+          >
+            <option disabled>Company</option>
+            <option>ABC</option>
+            <option>BCD</option>
+            <option>DEF</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputEmployee">Employee Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="employee"
+            [formControl]="employee"
+            placeholder="Employee"
+            required="Can Not Empty"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="form-group col-md-4">
+          <label for="inputUserName">User Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userName"
+            [formControl]="userName"
+            placeholder="User Name"
+            required="Can Not Empty"
+          />
+          
+        </div>
+        
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Password"
+            [formControl]="password"
+            required="Can Not Empty"
+          />
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            [formControl]="confirmPassword"
+            placeholder="Password"
+            required="Can Not Empty"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="closeModal()">
+      Close
+    </button>
+    <button type="submit" class="btn btn-primary" (click)="save()">
+      Save User
+    </button>
+  </div>
+</form>
+
+ -->
+
+<form class="p-1" [formGroup]="formGroup" (validSubmit)="save()">
+  <div class="modal-header">
+    <h1 class="modal-title">Add New User</h1>
+  </div>
+  <div class="modal-body">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">Role:</label>
+        <select
+          id="inputState"
+          aria-placeholder="Role"
+          class="form-control"
+          formControlName="role"
+        >
+          <option disabled>Role</option>
+          <option>Admin</option>
+          <option>HR</option>
+          <option>User</option>
+        </select>
+      </div>
+      <div class="row mt-4">
+        <div class="form-group col-md-4">
+          <label for="inputState">Locations:</label>
+          <select
+            id="inputState"
+            aria-placeholder="Locations"
+            class="form-control"
+            formControlName="location"
+          >
+            <option disabled>Locations</option>
+            <option>Colombo</option>
+            <option>Hanwella</option>
+            <option>Galle</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputState">Company:</label>
+          <select
+            aria-placeholder="Company"
+            class="form-control"
+            formControlName="company"
+          >
+            <option disabled>Company</option>
+            <option>ABC</option>
+            <option>BCD</option>
+            <option>DEF</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputEmployee">Employee Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Employee Name"
+            formControlName="employee"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="form-group col-md-4">
+          <label for="inputUserName">User Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="User Name"
+            formControlName="userName"
+          />
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            formControlName="password"
+          />
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Confirm Password"
+            formControlName="confirmPassword"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="closeModal()">
+      Close
+    </button>
+    <button type="submit" class="btn btn-primary">Save User</button>
+  </div>
+</form>
